@@ -12,4 +12,4 @@ var city
 // alert(message)
 console.log(message)
 
-document.write('<h1>' + message + '</h1>')
+// document.write('<h1>' + message + '</h1>')
