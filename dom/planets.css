@@ -1,0 +1,7 @@
+.warning {
+    color: red;
+    background-color: rgb(255, 203, 72);
+}
+.message {
+    font-family: sans-serif;
+}
