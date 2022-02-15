@@ -1,5 +1,7 @@
-
 const speed = 1000
+
+document.querySelector('input').addEventListener('click', run)
+document.addEventListener('keydown', pressLetter)
 
 function randomNumber(max) {
     return Math.round(Math.random() * max)
@@ -52,5 +54,3 @@ function pressLetter(event) {
     }
 }
 
-document.querySelector('input').addEventListener('click', run)
-document.addEventListener('keydown', pressLetter)
