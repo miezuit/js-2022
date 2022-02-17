@@ -4,10 +4,12 @@ document.querySelector('#reset').addEventListener('click', reset)
 // load este evenimentul de incarcare a paginii
 window.addEventListener('load', init)
 
+const storageKey = 'myapp_settings'
+
 function init() {
     // iau din local storage si decodez JSON-ul
     // daca nu exista in local storage, returneaza null
-    let settings = JSON.parse(localStorage.getItem('myapp_settings'))
+    let settings = JSON.parse(localStorage.getItem(storageKey))
 
     if (settings) {
         showWelcome(settings.name)
@@ -22,7 +24,7 @@ function saveSettingsAndShowWelcome() {
     }
 
     // salvam in local storage ca JSON
-    localStorage.setItem('myapp_settings', JSON.stringify(settings))
+    localStorage.setItem(storageKey, JSON.stringify(settings))
 
     showWelcome(settings.name)
 }
@@ -33,7 +35,7 @@ function showWelcome(name) {
 }
 
 function reset() {
-    localStorage.removeItem('myapp_settings')
+    localStorage.removeItem(storageKey)
     // face un reload pentru pagina
     location.reload()
 }
